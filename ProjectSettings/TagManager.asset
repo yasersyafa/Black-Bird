@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Pipe
+  - Pass
   layers:
   - Default
   - TransparentFX
@@ -38,8 +40,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Bg
+    uniqueID: 1662051401
+    locked: 0
+  - name: Pipe
+    uniqueID: 1379468303
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 908565757
     locked: 0
   m_RenderingLayers:
   - Default
