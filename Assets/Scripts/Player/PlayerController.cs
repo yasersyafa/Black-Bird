@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float jumpForce = 5f;
 
-    public Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
     public static Action onPlayerPass;
     public static Action onPlayerDie;
 
@@ -28,13 +28,13 @@ public class PlayerController : MonoBehaviour
         {
             onPlayerPass?.Invoke();
         }
-        else if (other.CompareTag("Pipe"))
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("DeathZone"))
         {
-            onPlayerDie?.Invoke();
-        }
-        else if (other.CompareTag("Ground"))
-        {
-            onPlayerDie?.Invoke();
+            Debug.Log("Hello, you died");
         }
     }
 
