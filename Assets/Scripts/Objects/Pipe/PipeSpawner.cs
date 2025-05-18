@@ -1,3 +1,4 @@
+using Scripts.Core.EventSystem;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -13,6 +14,7 @@ namespace Scripts.Objects.Pipe
         [SerializeField] private float spawnInterval = 2f;
 
         private ObjectPool<GameObject> pipePool;
+        private bool isSpawning = false;
         private float timer;
 
         private void Awake()
@@ -28,14 +30,31 @@ namespace Scripts.Objects.Pipe
             );
         }
 
+        private void OnEnable()
+        {
+            EventBus.OnStateChanged += HandleStateChanged;
+        }
+
+        private void OnDisable()
+        {
+            EventBus.OnStateChanged -= HandleStateChanged;
+        }
+
         private void Update()
         {
+            if(!isSpawning) return;
+            
             timer += Time.deltaTime;
             if (timer >= spawnInterval)
             {
                 timer = 0f;
                 SpawnPipe();
             }
+        }
+
+        private void HandleStateChanged(GameState currentState)
+        {
+            isSpawning = currentState == GameState.Playing;
         }
 
         private void SpawnPipe()

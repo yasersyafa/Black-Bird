@@ -6,41 +6,32 @@ namespace Scripts.Core.EventSystem
 {
     public static class EventBus
     {
-        private static Dictionary<EventType, Action> assignedEvents = new();
+        public static event Action<GameState> OnStateChanged;
+        public static event Action OnPipePassed;
+        public static event Action<float> OnGameUpdate;
+        public static event Action OnQuestInitiated;
+        public static event Action<string> OnQuestCompleted;
 
-        public static void Raise(EventType eventType)
-        {
-            if (assignedEvents.TryGetValue(eventType, out Action existingAction))
-            {
-                existingAction?.Invoke();
-            }
-        }
+        public static void PublishGameState(GameState newState) =>
+            OnStateChanged?.Invoke(newState);
 
-        public static void Subscribe(EventType eventType, Action action)
-        {
-            if (assignedEvents.ContainsKey(eventType))
-            {
-                assignedEvents[eventType] += action;
-            }
-            else
-            {
-                assignedEvents[eventType] = action;
-            }
-        }
+        public static void PublishPipePassed() =>
+            OnPipePassed?.Invoke();
 
-        public static void Unsubscribe(EventType eventType, Action action)
-        {
-            if (assignedEvents.ContainsKey(eventType))
-            {
-                assignedEvents[eventType] -= action;
-            }
-        }
+        public static void PublishGameUpdate(float deltaTime) =>
+            OnGameUpdate?.Invoke(deltaTime);
+
+        public static void PublishQuestInitiated() =>
+            OnQuestInitiated?.Invoke();
+        public static void PublishQuestCompleted(string questId) =>
+            OnQuestCompleted?.Invoke(questId);
+       
     }
 
-    public enum EventType
+    public enum GameState
     {
-        QuestInitiated,
-        QuestCompleted,
-        PlayerDied,
+        Waiting,
+        Playing,
+        GameOver,
     }
 }
