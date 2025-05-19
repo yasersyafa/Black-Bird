@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour
     private void Update()
     {
         scoreText.text = score.ToString();
-        highScoreText.text = highScore.ToString();
+        // highScoreText.text = highScore.ToString();
     }
     void IncrementScore()
     {
