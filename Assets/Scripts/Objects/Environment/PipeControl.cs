@@ -6,7 +6,7 @@ public class PipeControl : MonoBehaviour
     private float xSpawnPosition = 9f;
     private float ySpawnPosition;
 
-    private float spawnInterval = 0.75f;
+    [SerializeField, Range(0.1f, 5f)] private float spawnInterval = 0.75f;
     private float timer;
 
     void Update()
