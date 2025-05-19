@@ -1,13 +1,24 @@
 using System;
+using Scripts.Core.EventSystem;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float jumpForce = 5f;
 
-    public Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
     public static Action onPlayerPass;
     public static Action onPlayerDie;
+
+    private void OnEnable()
+    {
+        EventBus.OnStateChanged += HandleStateChanged;
+    }
+
+    private void OnDisable()
+    {
+        EventBus.OnStateChanged -= HandleStateChanged;
+    }
 
     void Update()
     {
@@ -26,15 +37,32 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Pass"))
         {
-            onPlayerPass?.Invoke();
+            EventBus.PublishPipePassed();
         }
-        else if (other.CompareTag("Pipe"))
+    }
+
+    private void HandleStateChanged(GameState currentState)
+    {
+        switch (currentState)
         {
-            onPlayerDie?.Invoke();
+            case GameState.Waiting:
+                rb.simulated = false;
+                break;
+            case GameState.Playing:
+                rb.simulated = true;
+                break;
+            case GameState.GameOver:
+                rb.simulated = false;
+                break;
         }
-        else if (other.CompareTag("Ground"))
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("DeathZone"))
         {
-            onPlayerDie?.Invoke();
+            // change state to game over
+            EventBus.PublishGameState(GameState.GameOver);
         }
     }
 
