@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
 
     [SerializeField] private Rigidbody2D rb;
-    public static Action onPlayerPass;
-    public static Action onPlayerDie;
 
     private void OnEnable()
     {
@@ -37,8 +35,17 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Pass"))
         {
+            Debug.Log("Player passed the pipe");
             EventBus.PublishPipePassed();
         }
+
+        else if (other.gameObject.CompareTag("DeathZone"))
+        {
+            Debug.Log("Player died");
+            // change state to game over
+            EventBus.PublishGameState(GameState.GameOver);
+        }
+        
     }
 
     private void HandleStateChanged(GameState currentState)
@@ -56,14 +63,4 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("DeathZone"))
-        {
-            // change state to game over
-            EventBus.PublishGameState(GameState.GameOver);
-        }
-    }
-
 }

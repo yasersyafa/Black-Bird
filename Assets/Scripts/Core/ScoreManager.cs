@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Scripts.Core.EventSystem;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -10,13 +11,12 @@ public class ScoreManager : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerController.onPlayerPass += IncrementScore;
-        PlayerController.onPlayerDie += ResetScore;
+        EventBus.OnPipePassed += IncrementScore;
+    
     }
     private void OnDisable()
     {
-        PlayerController.onPlayerPass -= IncrementScore;
-        PlayerController.onPlayerDie -= ResetScore;
+        EventBus.OnPipePassed -= IncrementScore;
     }
 
     private void Start()

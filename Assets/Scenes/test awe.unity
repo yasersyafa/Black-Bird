@@ -305,6 +305,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -371,6 +375,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: pipe
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -436,6 +448,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_Name
       value: pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -760,6 +776,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -830,6 +850,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -899,6 +923,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1001,6 +1029,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1070,6 +1102,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1176,6 +1212,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_Name
       value: pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1313,6 +1353,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_Name
       value: pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1597,6 +1641,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2048,6 +2096,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3db8a22a7ce220e44b66f6e88067dfd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2225,6 +2277,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2082710531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2082710532}
+  m_Layer: 0
+  m_Name: ===========================
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2082710532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082710531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 466.2377, y: 1638.8162, z: -2.9458985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2111773352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2320,7 +2403,7 @@ GameObject:
   - component: {fileID: 2137744373}
   m_Layer: 0
   m_Name: Bird
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2433,6 +2516,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 133753633}
+  - {fileID: 1152538442}
+  - {fileID: 2082710532}
   - {fileID: 1229703717}
   - {fileID: 567439237}
   - {fileID: 4179543}
@@ -2444,7 +2529,6 @@ SceneRoots:
   - {fileID: 1178072503}
   - {fileID: 1675366381}
   - {fileID: 1947323206}
-  - {fileID: 1152538442}
   - {fileID: 187391074}
   - {fileID: 1642151051}
   - {fileID: 2111773352}
