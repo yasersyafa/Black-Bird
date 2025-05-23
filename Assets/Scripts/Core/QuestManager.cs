@@ -1,16 +1,39 @@
 using UnityEngine;
+using System.Collections.Generic;
+using Scripts.Core.EventSystem;
+
+
 
 public class QuestManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public List<Quest> mainQuests;
+    public List<Quest> uniqueQuests;
+    private void OnEnable()
     {
-        
+        EventBus.OnPipePassed += HandlePipePassed;
+        // EventBus.OnScreenTapped += HandleScreenTapped;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        EventBus.OnPipePassed -= HandlePipePassed;
+        // EventBus.OnScreenTapped -= HandleScreenTapped;
+    }
+    private void HandlePipePassed()
+    {
+        foreach (var quest in mainQuests)
+        {
+            if (!quest.isCompleted)
+                quest.UpdateProgress();
+        }
+    }
+
+    private void HandleScreenTapped()
+    {
+        foreach (var quest in uniqueQuests)
+        {
+            if (!quest.isCompleted)
+                quest.UpdateProgress();
+        }
     }
 }
